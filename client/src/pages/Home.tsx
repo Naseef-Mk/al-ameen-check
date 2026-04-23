@@ -131,7 +131,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation Header */}
-      <motion.header
+        <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? "bg-white shadow-lg"
@@ -141,7 +141,7 @@ export default function Home() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container flex items-center justify-between gap-3 py-3 md:py-4">
+        <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex items-center justify-between gap-4 py-4 md:py-4">
           <div className="flex min-w-0 items-center gap-2 md:gap-3">
             <img
               src="/alameen-logo-mark.png"
@@ -176,7 +176,6 @@ export default function Home() {
           </a>
         </div>
       </motion.header>
-
       {/* Hero Section */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden pb-12 pt-24 md:pb-16 md:pt-24 lg:h-screen">
         {/* Background Image */}
