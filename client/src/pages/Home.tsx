@@ -20,7 +20,11 @@ import {
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AIRPORTS } from "@/lib/airports";
-
+const branches = [
+  { name: "Head Office", area: "Central Salalah", address: "23rd July St, Salalah", phone: "+968 99172257", maps: "https://www.google.com/maps?q=Salalah%20Oman&output=embed" },
+  { name: "New Salalah", area: "Al nahda Street", address: "Near Muscat Pharmacy, Salalah", phone: "+968 90941233", maps: "https://www.google.com/maps?q=Haffa%20Salalah&output=embed" },
+  { name: "Sa'adah Branch", area: "Saadah", address: "Al Mashhoor Complex, Saadah, Salalah", phone: "+968 90664141", maps: "https://www.google.com/maps?q=Saadah%20Salalah&output=embed" },
+];
 /**
  * Design Philosophy: Modern Luxury Travel
  * - Color Palette: Deep Ocean Blue (#1e3a5f) + Warm Gold (#d4a574)
@@ -543,20 +547,23 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {[1, 2, 3].map((branch) => (
-              <motion.div key={branch} variants={itemVariants}>
+            {branches.map((branch, index) => (
+              <motion.div key={index} variants={itemVariants}>
                 <Card className="card-luxury text-center">
                   <MapPin className="w-12 h-12 text-accent mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-primary mb-2">
-                    Branch {branch}
+                    {branch.name}
                   </h3>
+                  <p className="text-muted-foreground mb-2 text-sm">
+                    {branch.area}
+                  </p>
                   <p className="text-muted-foreground mb-4">
-                    23rd July Street, Salalah
+                    {branch.address}
                   </p>
                   <div className="space-y-2 text-sm">
                     <p className="flex items-center justify-center gap-2">
                       <Phone className="w-4 h-4 text-accent" />
-                      +968 90664141
+                      {branch.phone}
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <Mail className="w-4 h-4 text-accent" />
