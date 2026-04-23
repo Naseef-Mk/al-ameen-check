@@ -550,7 +550,14 @@ export default function Home() {
             {branches.map((branch, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <Card className="card-luxury text-center">
-                  <MapPin className="w-12 h-12 text-accent mx-auto mb-4" />
+                                  <a
+                    href={branch.maps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mb-4 hover:opacity-80 transition-opacity"
+                  >
+                    <MapPin className="w-12 h-12 text-accent mx-auto" />
+                  </a>
                   <h3 className="text-xl font-bold text-primary mb-2">
                     {branch.name}
                   </h3>
