@@ -567,7 +567,7 @@ export default function Home() {
                     </p>
                     <p className="flex items-center justify-center gap-2">
                       <Mail className="w-4 h-4 text-accent" />
-                      shukoor@alameentravel.com
+                      shukoor@alameentravels.com
                     </p>
                   </div>
                 </Card>
